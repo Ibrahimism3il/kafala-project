@@ -11,6 +11,18 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Application;
 use App\Models\User;
 use App\Models\Job;
+use App\Http\Controllers\Auth\CustomAuthController;
+
+
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [CustomAuthController::class, 'showLoginForm'])->name('custom.login');
+    Route::post('/login', [CustomAuthController::class, 'login']);
+
+    Route::get('/register', [CustomAuthController::class, 'showRegisterForm'])->name('custom.register');
+    Route::post('/register', [CustomAuthController::class, 'register']);
+});
+
+Route::post('/logout', [CustomAuthController::class, 'logout'])->name('custom.logout');
 
 // الصفحة الرئيسية تعرض آخر 3 وظائف
 Route::get('/', function () {
@@ -65,4 +77,7 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::resource('users', AdminUserController::class);
 });
 
-require __DIR__ . '/auth.php';
+
+
+
+// require __DIR__ . '/auth.php';

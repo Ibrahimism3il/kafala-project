@@ -18,10 +18,10 @@
         <a href="{{ route('home') }}" class="nav-link">
             الرئيسية
         </a>
-        <a href="{{ route('register') }}" class="nav-link">
+        <a href="{{ route('custom.register') }}" class="nav-link">
              التسجيل
         </a>
-        <a href="{{ route('login') }}" class="nav-link">
+        <a href="{{ route('custom.login') }}" class="nav-link">
            تسجيل الدخول
         </a>
     </div>
@@ -40,7 +40,7 @@
                     <h3>{{ $job->title }}</h3>
                     <p>{{ $job->company }} - {{ $job->location }}</p>
                   @guest
-                    <a href="{{ route('login') }}"
+                    <a href="{{ route('custom.login') }}"
                        class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow transition">
                        تسجيل
                     </a>
