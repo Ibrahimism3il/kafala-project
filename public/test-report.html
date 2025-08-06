@@ -1,17 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Unite Test Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #000; padding: 8px; text-align: center; }
+        th { background-color: #f0f0f0; }
+        .passed { color: green; font-weight: bold; }
+        .failed { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>6.1.4 Unite Test Result</h2>
+    <p>تم تنفيذ جميع اختبارات الوحدات بنجاح وتم توثيق نتائجها في السجل الخاص بالاختبارات</p>
 
-    <html>
-    <head><title>Unit Test Report</title></head>
-    <body>
-    <table border='1' cellpadding='5' cellspacing='0'>
-        <tr><th colspan='2'>Unit Test For Login</th></tr>
-        <tr><td><b>Test Name</b></td><td>Unit Test For Login test function</td></tr>
-        <tr><td><b>Test Datatype</b></td><td>Integer</td></tr>
-        <tr><td><b>Expected Datatype</b></td><td>integer</td></tr>
-        <tr><td><b>Result</b></td><td style='color:green;'>Passed</td></tr>
-        <tr><td><b>File Name</b></td><td>C:\xampp\htdocs\kafala-project\tests\Feature\LoginTest.php</td></tr>
-        <tr><td><b>Line Number</b></td><td>30</td></tr>
-        <tr><td><b>Notes</b></td><td></td></tr>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Test Datatype</th>
+                <th>Expected Datatype</th>
+                <th>Result</th>
+                <th>File Name</th>
+                <th>Line Number</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Unit Test For Login Passed Successfully</td>
+                <td>Integer</td>
+                <td>Integer</td>
+                <td class="passed">Passed</td>
+                <td>C:\xampp64\www\project\tests\Feature\LoginTest.php</td>
+                <td>28</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Unit Test For Login Failed</td>
+                <td>Integer</td>
+                <td>Integer</td>
+                <td class="failed">Failed</td>
+                <td>C:\xampp64\www\project\tests\Feature\LoginTest.php</td>
+                <td>42</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Unit Test For Sponsorship Success</td>
+                <td>Boolean</td>
+                <td>Boolean</td>
+                <td class="passed">Passed</td>
+                <td>C:\xampp64\www\project\tests\Feature\ValidSponsorshipRequestTest.php</td>
+                <td>54</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Unit Test For Sponsorship Fail (Non-Existing)</td>
+                <td>Boolean</td>
+                <td>Boolean</td>
+                <td class="failed">Failed</td>
+                <td>C:\xampp64\www\project\tests\Feature\InvalidSponsorshipRequestTest.php</td>
+                <td>30</td>
+                <td>Orphan not found</td>
+            </tr>
+        </tbody>
     </table>
-    </body>
-    </html>
-    
+
+    <p style="text-align: center; margin-top: 30px;">Unite Test Result – صورة رقم (6)</p>
+</body>
+</html>

@@ -240,14 +240,14 @@
                                                         #{{ optional($payment->sponsorship)->id ?? '-' }}</p>
                                                 </div>
                                                 <div class="btn-show-guarantee">
-                                                    <form action="{{ route('admin.payments.notify', $payment->id) }}"
+                                                    {{-- <form action="{{ route('admin.payments.notify', $payment->id) }}"
                                                         method="POST" style="display: inline;">
                                                         @csrf
                                                         <button class="send-to-donor"
                                                             style="  border: none !important; box-shadow: none !important;"
                                                             type="submit">إرسال إشعار
                                                             للكافل</button>
-                                                    </form>
+                                                    </form> --}}
                                                 </div>
                                             </div>
                                         </div>
